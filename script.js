@@ -1,10 +1,10 @@
 calculateTime = () => {
-  var date = new Date();
-  var dayNumber = date.getDay();
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var ampm = hour >= 12 ? 'PM' : 'AM';
-  var dayNames = ["SUN", "MON", "TUE", "WED", "THU","FRI", "SAT"];
+  let date = new Date();
+  let dayNumber = date.getDay();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let ampm = hour >= 12 ? 'PM' : 'AM';
+  let dayNames = ["SUN", "MON", "TUE", "WED", "THU","FRI", "SAT"];
 
   hour = hour % 12;
   hour = hour ? hour : '12';
@@ -17,6 +17,6 @@ calculateTime = () => {
   document.querySelector("#ampm").textContent = ampm;
 
   setTimeout(calculateTime, 200);
-}
+};
 
-window.addEventListener('load', calculateTime)
+window.addEventListener('load', calculateTime);
